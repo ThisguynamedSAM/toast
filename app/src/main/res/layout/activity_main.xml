@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".Main">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="This is a complement button."
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:gravity="center_horizontal"
+        android:textSize="32sp"
+        android:paddingTop="30dp"
+        android:paddingBottom="80dp" />
+
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="The creator of this application is not responsible for the reprocussions of the usage of this app hereof and foreverforth"
+        android:layout_below="@id/header"
+        android:layout_centerHorizontal="true"
+        android:textSize="8sp"
+        android:padding = "0dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="0dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go on; click me."
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/warning"
+        android:paddingTop = "2dp"
+        android:textStyle="italic"
+        android:typeface="sans"
+        android:textSize="20sp" />
+
+</RelativeLayout>
