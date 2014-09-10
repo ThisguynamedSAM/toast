@@ -35,14 +35,13 @@ import java.util.Random;
 /** This application gives a user a random compliment in the form of a toast */
 public class Main extends Activity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         final ArrayList comps = new ArrayList<String>();
-        BufferedReader read   = null;
+        BufferedReader read;
 
         /** Try and read the text of compliments located in src/main/assets */
         try {
@@ -53,20 +52,12 @@ public class Main extends Activity {
                 comps.add(read.readLine());
             } while (read.readLine() != null);
 
+            read.close();
         } catch (FileNotFoundException e) {
             Log.d("Input", "File not found exception triggered");
         } catch (IOException ex) {
             Log.d("Input", "IOException raised");
 
-        } finally {
-            try {
-                /** Always close your buffers */
-                read.close();
-            } catch (NullPointerException e) {
-                Log.d("close", "NullPointer Exception caught");
-            } catch (IOException ex) {
-                Log.d("close", "IOException thrown");
-            }
         }
 
         Button b = (Button) findViewById(R.id.button);
